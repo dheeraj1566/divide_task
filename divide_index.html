@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divide_index</title>
+</head>
+<body>
+<div class="main">
+    <input id="ipfirst" type="text">
+    <input id="ipsecond" type="number">
+    <button id="btn" onclick="split()">submit</button>
+
+</div>
+</body>
+</html>
+
+
+<script>
+    function split() {
+        var inputtext= document.getElementById("ipfirst").value;
+        var num = document.getElementById("ipsecond").value;
+        
+        var inputstore =[];
+        for(i=0; i<inputtext.length; i+=num){
+            let string='';
+            for(j=0; j<num && i + j < inputtext.length; j++){
+           string += inputtext[i + j];    
+            }
+            inputstore.push(string);
+         }
+        
+        document.write(JSON.stringify(inputstore));
+
+
+
+        
+    }
+        
+        
+                
+</script>
